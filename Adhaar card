@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main()
+{
+    long phnumber,aadharno,yob;
+    int choice;
+    char name[100];
+    printf("Enter your name");
+   gets(name);
+     printf("\nEnter your aadhar no.");
+    scanf("%ld",&aadharno);
+     printf("\nEnter your year of birth");
+    scanf("%ld",&yob);
+     printf("\nEnter your phone number");
+    scanf("%ld",&phnumber);
+    if(yob>2007)
+    printf("your age is under 15, so not eligible for vaccination");
+    else
+    {
+     printf("\nEnter 1 for covishield or 2 for covaxin");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+        case 1:
+        printf("\nName: %s",name);
+        printf("\nphone number: %ld",phnumber);
+        printf("\naadhar number: %ld",aadharno);
+        printf("\nvaccine choice: covishield");
+        break;
+         case 2:
+        printf("\nName: %s",name);
+        printf("\nphone number: %ld",phnumber);
+        printf("\naadhar number: %ld",aadharno);
+        printf("\nvaccine choice: covaxin");
+        break;
+        default:
+        printf("\nno such choice available");
+    }
+    }
+    return 0;
+}
